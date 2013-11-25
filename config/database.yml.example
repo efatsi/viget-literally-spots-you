@@ -1,0 +1,25 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: parking_development
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: parking_test
+  pool: 5
+  username: root
+  password:
+  host: localhost
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: parking_production
+  pool: 5
+  username: root
+  password:
