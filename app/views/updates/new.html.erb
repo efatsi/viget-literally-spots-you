@@ -1,0 +1,8 @@
+<h2>Set your status</h2>
+
+<%= form_for @update do |f| %>
+  <%= f.select :status, options_for_select(["taken", "available"]) %>
+  <%= f.file_field :image %>
+
+  <%= f.submit %>
+<% end %>
