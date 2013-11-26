@@ -1,0 +1,23 @@
+<div>The spot is ... <%= update.status.upcase %></div>
+
+<br>
+
+<div><%= image_tag(update.image(:medium)) %></div>
+
+<br>
+
+<% if update.pixel_count %>
+  <div>Current pixel count is: <%= update.pixel_count %></div>
+<% end %>
+
+<br>
+
+<% if update.canny_image %>
+  <div><%= image_tag(update.canny_image(:medium)) %></div>
+<% end %>
+
+<br>
+
+<div>Created at: <%= update.created_at.in_time_zone("MST").strftime("%x %X") %></div>
+
+<%= link_to "All Updates", updates_path %>
