@@ -7,6 +7,8 @@ gem 'thin'
 
 gem 'paperclip',    '~> 3.0'
 gem 'aws-sdk'
+gem 'pry'
+
 
 gem 'sass-rails',   '~> 4.0.0'
 gem 'coffee-rails', '~> 4.0.0'
