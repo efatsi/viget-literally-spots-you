@@ -1,5 +1,5 @@
 VigetLiterallySpotsYou::Application.routes.draw do
-  resources :updates, :only => [:new, :create]
+  resources :updates, :only => [:new, :create, :index, :show]
+  root 'updates#latest'
 
-  root 'home#index'
 end

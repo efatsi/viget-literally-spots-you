@@ -1,6 +1,18 @@
 class UpdatesController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
+  def latest
+    @update = Update.last
+  end
+
+  def index
+    @updates = Update.order("created_at DESC")
+  end
+
+  def show
+    @update = Update.find(params[:id])
+  end
+
   def new
     @update = Update.new
   end
