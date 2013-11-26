@@ -11,10 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131125234200) do
-
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
+ActiveRecord::Schema.define(version: 20131126013104) do
 
   create_table "updates", force: true do |t|
     t.string   "status"
@@ -24,6 +21,11 @@ ActiveRecord::Schema.define(version: 20131125234200) do
     t.datetime "image_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "pixel_count"
+    t.string   "canny_image_file_name"
+    t.string   "canny_image_content_type"
+    t.integer  "canny_image_file_size"
+    t.datetime "canny_image_updated_at"
   end
 
 end
