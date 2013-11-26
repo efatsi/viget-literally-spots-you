@@ -2,8 +2,9 @@
 
 <ul>
   <% @updates.each do |update| %>
-    <li><%= link_to update.created_at.in_time_zone("MST").strftime("%X"), update %></li>
+    <li><%= link_to update.created_at.in_time_zone("MST").strftime("%x %X"), update %></li>
     Pixel Count: <%= update.pixel_count %>
+    Status: <%= update.status.upcase %>
     <br><br>
   <% end %>
 </ul>
