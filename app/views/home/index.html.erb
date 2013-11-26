@@ -1,5 +1,5 @@
-<div>The spot is ... TAKEN <-- that's a guess, a static guess</div>
+<div>The spot is ... <%= @update.status.upcase %></div>
 
 <br>
 
-<div>[image will be here soon]</div>
+<div><%= image_tag(@update.image(:medium)) %></div>
