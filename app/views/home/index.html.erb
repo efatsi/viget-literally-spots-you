@@ -4,6 +4,10 @@
 
 <div><%= image_tag(@update.image(:medium)) %></div>
 
-<div>Current pixel count is: <%= @update.pixel_count %></div>
+<% if @update.pixel_count %>
+  <div>Current pixel count is: <%= @update.pixel_count %></div>
+<% end %>
 
-<div><%= image_tag(@update.canny_image(:medium)) %></div>
+<% if @update.canny_image %>
+  <div><%= image_tag(@update.canny_image(:medium)) %></div>
+<% end %>
