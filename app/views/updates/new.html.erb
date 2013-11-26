@@ -2,7 +2,9 @@
 
 <%= form_for @update do |f| %>
   <%= f.select :status, options_for_select(["taken", "available"]) %>
+  <%= f.input :pixel_count %>
   <%= f.file_field :image %>
+  <%= f.file_field :canny_image %>
 
   <%= f.submit %>
 <% end %>

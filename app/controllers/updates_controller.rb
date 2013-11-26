@@ -16,6 +16,6 @@ class UpdatesController < ApplicationController
   private
 
   def update_params
-    params.require(:update).permit([:status, :image])
+    params.require(:update).permit([:status, :image, :pixel_count, :canny_image])
   end
 end
