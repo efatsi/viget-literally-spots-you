@@ -4,4 +4,12 @@ class Update < ActiveRecord::Base
 
   validates :status, :presence => true
   validates :status, :inclusion => { :in => ["taken", "available"] }
+
+  def available?
+    status == "available"
+  end
+
+  def taken?
+    status == "taken"
+  end
 end
