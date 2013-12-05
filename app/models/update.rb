@@ -5,11 +5,24 @@ class Update < ActiveRecord::Base
   validates :status, :presence => true
   validates :status, :inclusion => { :in => ["taken", "available"] }
 
+  def taken?
+    status == "taken"
+  end
+
   def available?
     status == "available"
   end
 
-  def taken?
-    status == "taken"
+  def notify_if_necessary
+    if available? && previous_update.taken?
+      Alert.send_notifications
+    end
   end
+
+  private
+
+  def previous_update
+    Update.find(id - 1)
+  end
+
 end

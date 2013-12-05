@@ -21,6 +21,7 @@ class UpdatesController < ApplicationController
     @update = Update.new(update_params)
 
     if @update.save
+      @update.notify_if_necessary
       redirect_to root_url
     end
   end
